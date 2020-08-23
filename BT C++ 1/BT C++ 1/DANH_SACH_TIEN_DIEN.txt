@@ -1,0 +1,10 @@
+Bang thanh toan tien dien cua cac chu ho:
+
+STT    TEN CHU HO          SO DIEN THANG NAY   TIEN DIEN THANG NAY 
+1      tran huy canh       23                  12650               
+2      tran dinh huan      4322                8271550             
+----------------------------------------------
+Cac khach hang su dung dien <= 100 so: tran huy canh, 
+Cac khach hang su dung dien tu 101-300 so: khong co ai
+Cac khach hang su dung dien > 300 so: tran dinh huan, 
+----------------------------------------------
