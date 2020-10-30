@@ -18,8 +18,7 @@ void Chuyen_Tu_He_10(int a, int b) {
 		while (a != 0) {
 			int so_du = a%b;
 			a /= b;
-			A[i] = BangMa[so_du];
-			i++;
+			A[i++] = BangMa[so_du];
 		}
 		A[i] = '\0';
 		cout << "So nguyen " << a << " chuyen sang he " << b << " la: ";
