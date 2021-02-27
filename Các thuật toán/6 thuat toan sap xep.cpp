@@ -50,8 +50,8 @@ void quicksort(int a[], int left, int right) {
 		int k = (left+right)/2;
 		int t = a[k];
 		while(i <= j) {
-			while(a[i] < t) i++;
-			while(a[j] > t) j--;
+			while(a[i] < t) i++;      // nếu sx giảm thì đổi thành >
+			while(a[j] > t) j--;	  // nếu sx giảm thì đổi thành <
 			if(i <= j) {
 				int temp = a[i];
 				a[i] = a[j];
@@ -65,8 +65,8 @@ void quicksort(int a[], int left, int right) {
 	}
 }
 void swap(int a[], int k, int n) {
-	int i = 2*k+1; // i v� i+1 l� 2 l� of k
-	// so s�nh 2 l�
+	int i = 2*k+1; // i vŕ i+1 lŕ 2 lá of k
+	// so sánh 2 lá
 	if(a[i] < a[i+1]) i = i+1;
 	if(a[k] < a[i] && i < n) {
 		int temp = a[k];
