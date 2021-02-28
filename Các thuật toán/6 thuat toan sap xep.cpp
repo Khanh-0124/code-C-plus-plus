@@ -65,14 +65,14 @@ void quicksort(int a[], int left, int right) {
 	}
 }
 void swap(int a[], int k, int n) {
-	int i = 2*k+1; // i vŕ i+1 lŕ 2 lá of k
+	int i = 2*k+1; // i và i+1 là 2 lá của k
 	// so sánh 2 lá
 	if(a[i] < a[i+1]) i = i+1;
 	if(a[k] < a[i] && i < n) {
 		int temp = a[k];
 		a[k] = a[i];
 		a[i] = temp;
-		swap(a, i, n); // tiep tuc voi cac nhanh ben duoi la duoc chon
+		swap(a, i, n); // tiếp tục với các nhánh bên dưới lá được chọn
 	}
 }
 void create_heap(int a[], int n) {
@@ -86,7 +86,7 @@ void heapsort(int a[], int n) {
 		int temp = a[0];
 		a[0] = a[i];
 		a[i] = temp;
-		swap(a, 0, i-1); // tiep tuc voi nhanh ben duoi tinh tu nut dau tien la 0
+		swap(a, 0, i-1); // tiếp tục với nhánh bên dưới tính từ nút đầu tiên là 0
 	}
 }
 void merge(int a[], int left, int mid, int right) {
@@ -102,7 +102,7 @@ void merge(int a[], int left, int mid, int right) {
 		a2[i] = a[mid + i + 1];
 	}
 	
-	int i = 0, j = 0, k = left; // k la bien giam sat, phai bang left
+	int i = 0, j = 0, k = left; // k là biến giám sát, phải bằng left
 	while(i < n1 && j < n2) {
 		a[k++] = (a1[i] < a2[j]) ? a1[i++] : a2[j++];
 	}	
