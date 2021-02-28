@@ -104,7 +104,7 @@ void merge(int a[], int left, int mid, int right) {
 	
 	int i = 0, j = 0, k = left; // k là biến giám sát, phải bằng left
 	while(i < n1 && j < n2) {
-		a[k++] = (a1[i] < a2[j]) ? a1[i++] : a2[j++];
+		a[k++] = (a1[i] < a2[j]) ? a1[i++] : a2[j++];    // sắp xếp giảm thì sửa thành a1[i] > a2[j]
 	}	
 	while(i < n1) {
 		a[k++] = a1[i++];
