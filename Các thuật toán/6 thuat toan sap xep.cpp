@@ -138,4 +138,5 @@ int main()
 	xuat(a, n);
 	return 0;
 }
+cặcccccccccccccccccccccc
 
